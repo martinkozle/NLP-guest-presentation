@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Marp",
+            "type": "shell",
+            "command": "npx @marp-team/marp-cli@latest presentation.md -p ${file}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Marp: Export HTML",
+            "type": "shell",
+            "command": "npx @marp-team/marp-cli@latest presentation.md",
+            "group": "build"
+        },
+        {
+            "label": "Marp: Export PDF",
+            "type": "shell",
+            "command": "npx @marp-team/marp-cli@latest presentation.md --pdf --allow-local-files",
+            "group": "build"
+        },
+        {
+            "label": "Marp: Export PPTX",
+            "type": "shell",
+            "command": "npx @marp-team/marp-cli@latest presentation.md --pptx",
+            "group": "build"
+        }
+    ]
+}
